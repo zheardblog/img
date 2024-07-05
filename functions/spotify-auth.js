@@ -5,7 +5,7 @@ exports.handler = async (event, context) => {
     const code = JSON.parse(event.body).code;
     const clientId = process.env.CLIENT_ID;
     const clientSecret = process.env.CLIENT_SECRET;
-    const redirectUri = process.env.REDIRECT_URL;
+    const redirectUrl = process.env.REDIRECT_URL;
 
     try {
         const response = await axios.post('https://accounts.spotify.com/api/token', querystring.stringify({
