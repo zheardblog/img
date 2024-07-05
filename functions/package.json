@@ -1,0 +1,12 @@
+{
+  "name": "Ranking Zheard",
+  "version": "1.0.0",
+  "description": "Las canciones que mas has escuchado en Spotify",
+  "main": "spotify-auth.js",
+  "dependencies": {
+    "axios": "^0.24.0"
+  },
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0"
+  }
+}
