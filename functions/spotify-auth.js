@@ -15,13 +15,24 @@ exports.handler = async (event, context) => {
             client_id: clientId,
             client_secret: clientSecret
         }));
+
         return {
             statusCode: 200,
+            headers: {
+                'Access-Control-Allow-Origin': '*', // Permitir acceso desde cualquier origen
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Methods': 'POST'
+            },
             body: JSON.stringify({ accessToken: response.data.access_token })
         };
     } catch (error) {
         return {
             statusCode: 500,
+            headers: {
+                'Access-Control-Allow-Origin': '*', // Permitir acceso desde cualquier origen
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Methods': 'POST'
+            },
             body: 'Error fetching token'
         };
     }
